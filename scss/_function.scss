@@ -1,0 +1,44 @@
+@mixin circle($size, $background) {
+  border-radius: 50%;
+  height: $size;
+  width: $size;
+  background-color: $background;
+}
+
+// min 大於最小的 的響應式
+@mixin minipad() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin minipc() {
+  @media (min-width: 1040px) {
+    @content;
+  }
+}
+// max 小於最大的 的響應式
+@mixin maxmini() {
+  @media (max-width: 468px) {
+    @content;
+  }
+}
+@mixin maxphone() {
+  @media (max-width: 568px) {
+    @content;
+  }
+}
+@mixin maxpad() {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin maxpc() {
+  @media (max-width: 1040px) {
+    @content;
+  }
+}
+@mixin maxbigpc() {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}

@@ -1,0 +1,47 @@
+@mixin hide_text {
+  /* 圖片裝入容器 */
+  // 有圖片不能用class 去到處用
+  background-image: url(../nbaWeb/1588928235basketball-fire-logo-silhouette-freesvg.org.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* 圖片取代文字 */
+  display: block;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// 引入到SCSS
+@mixin shadow_self {
+    // box-shadow: x-位移 y-位移 blur-模糊值(實心1 > 10 模糊) spread-擴散值(範圍1-10) color-顏色(第四個透明度) inset-是否在內側(染色感)
+    $shadow:rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 10px 5px $shadow;
+    //NBA button
+    // box-shadow: 0 10px 1px $shadow;
+}
+// 或直接用class
+.shadow_self {
+    // box-shadow: x-位移 y-位移 blur-模糊值(實心1 > 10 模糊) spread-擴散值(範圍1-10) color-顏色(第四個透明度) inset-是否在內側(染色感)
+    $shadow:rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 10px 5px $shadow;
+    //NBA button
+    // box-shadow: 0 10px 1px $shadow;
+}
+
+// 大 按鈕正常 小 按鈕放大100%
+@mixin btn_rwd {
+  @include maxpc() {
+    // 直接在需要調整的地方 加入class
+    .btn_rwd {
+      width: 100%;
+    }
+  }
+}
+.btn_rwd {
+  @include maxpc() {
+    // 直接在需要調整的地方 加入class
+    .btn_rwd {
+      width: 100%;
+    }
+  }
+}
