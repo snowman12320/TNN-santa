@@ -13952,6 +13952,16 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.shadow_self {
+  box-shadow: 0px 3px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1040px) {
+  .btn_rwd .btn_rwd {
+    width: 100%;
+  }
+}
+
 .box_gradient {
   position: relative;
 }
@@ -14007,36 +14017,131 @@ textarea.form-control-lg {
   height: 100px;
 }
 
-.navbar-collapse a {
-  text-align: center;
-  color: black;
-  font-weight: 500;
+.navbar-default {
+  border: none;
+  border-radius: 0px;
+  background: #009BDD;
 }
 
-.nav_link_special {
-  height: 35px !important;
+.navbar-collapse {
+  padding: 0px;
+  margin: 0px;
 }
 
-@media (max-width: 1040px) {
-  .navbar-collapse li:last-child {
-    width: 25%;
+nav ul {
+  width: 100% !important;
+}
+
+nav ul li {
+  display: inline;
+  position: relative;
+}
+
+nav ul li ul {
+  width: 175px !important;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  padding: 0;
+  display: none;
+}
+
+nav ul li:hover {
+  background-color: #007DA7;
+}
+
+nav ul li ul li a {
+  display: block;
+  padding: 10px;
+  background: #009BDD;
+  border-bottom: 1px solid #fff;
+}
+
+nav ul li ul li ul {
+  left: 175px;
+  top: -27px;
+  position: absolute;
+  display: none;
+}
+
+nav ul .fa-sort-desc {
+  position: relative;
+  top: -3px;
+  right: -5px;
+}
+
+nav ul li ul li i {
+  margin-left: 20px !important;
+}
+
+nav ul li a:hover {
+  background: #007DA7 !important;
+  text-decoration: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff !important;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+.stylish-input-group .input-group-addon {
+  background: white !important;
+}
+
+.stylish-input-group .form-control {
+  border-right: 0;
+  box-shadow: 0 0 0;
+  border-color: #ccc;
+}
+
+.stylish-input-group button {
+  border: 0;
+  background: transparent;
+}
+
+nav ul .search, nav ul .custom-login, nav ul .custom-register {
+  float: right;
+}
+
+nav ul .search {
+  margin: 7px 10px 0px 0px;
+  border-radius: 4px;
+  width: 100px;
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar-default {
+    background-color: #009BDD;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+  .navbar-collapse {
+    padding: 10px 20px;
+  }
+  nav ul li ul {
+    top: 0px;
+    width: 100% !important;
+    position: relative;
+  }
+  nav ul ul li ul {
+    position: relative !important;
+    width: 100% !important;
+  }
+  nav ul li ul li ul {
+    top: 1px !important;
+    left: 0px !important;
+  }
+  nav ul .search, nav ul .custom-login, nav ul .custom-register {
+    float: unset;
   }
 }
-footer h3, footer .h3 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-footer ul li:last-child {
-  margin-bottom: 30px;
-}
-footer li {
-  padding-bottom: 0px;
-}
-footer a {
-  font-size: 14px;
-}
-
 *, a {
   box-sizing: border-box;
   text-decoration: none;
