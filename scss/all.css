@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik:700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+@import url("https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css");
 @import "./lightbox.min.css";
 :root {
   --bs-blue: #0d6efd;
@@ -14189,27 +14190,27 @@ textarea.form-control-lg {
   height: 100px;
 }
 
-.navbar_nav_one input:focus {
+.navbar_nav_top input:focus {
   box-shadow: 0 0 #212529;
-  border: 1px solid #212529;
+  border: none;
 }
 
-.navbar_nav_two .nav_parent {
+.navbar_nav_main .nav_parent {
   position: relative;
   padding: 20px 0px;
 }
-.navbar_nav_two .nav_parent a {
+.navbar_nav_main .nav_parent a {
   padding: 20px;
   color: #fff;
 }
-.navbar_nav_two .nav_parent:hover {
+.navbar_nav_main .nav_parent:hover {
   background-color: #343a40;
 }
-.navbar_nav_two .nav_parent:hover > .nav_child {
+.navbar_nav_main .nav_parent:hover > .nav_child {
   transition: all 0.5s;
   display: block !important;
 }
-.navbar_nav_two .nav_child {
+.navbar_nav_main .nav_child {
   display: none;
   position: absolute;
   background: #000;
@@ -14218,16 +14219,37 @@ textarea.form-control-lg {
   padding-left: 0;
   top: 63px;
   border: 2px solid #004870;
+  z-index: 1;
 }
-.navbar_nav_two .nav_child li {
+.navbar_nav_main .nav_child li {
   border-bottom: 1px solid #fff;
   padding: 10px;
 }
-.navbar_nav_two .nav_child li a {
+.navbar_nav_main .nav_child li a {
   padding: 10px 100px 10px 10px;
 }
-.navbar_nav_two .nav_child li:hover {
+.navbar_nav_main .nav_child li:hover {
   background-color: #004870;
+}
+.navbar_nav_main .dropdown_animation {
+  -webkit-animation: dropdown_animation 0.6s;
+          animation: dropdown_animation 0.6s;
+}
+@-webkit-keyframes dropdown_animation {
+  from {
+    top: 100px;
+  }
+  to {
+    top: 63px;
+  }
+}
+@keyframes dropdown_animation {
+  from {
+    top: 100px;
+  }
+  to {
+    top: 63px;
+  }
 }
 
 .swiper {
@@ -14260,6 +14282,28 @@ textarea.form-control-lg {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.index_three_card .col {
+  position: relative;
+}
+.index_three_card img {
+  transition: 0.5s;
+}
+.index_three_card .col:hover img {
+  transform: scale(1.2);
+}
+.index_three_card .banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: 0.5s;
+}
+.index_three_card .col:hover .banner {
+  display: block;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 62%, rgba(208, 208, 208, 0.5) 100%);
 }
 
 *,

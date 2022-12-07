@@ -1,4 +1,4 @@
-<header class="navbar_nav_one">
+<header class="navbar_nav_top">
   <section
     class="container d-flex justify-content-between align-items-center"
     style="height: 100px"
@@ -18,12 +18,12 @@
       <input
         type="text"
         class="form-control rounded-pill bg-gray-300"
-        name="navbar_nav_one_search"
+        name="navbar_nav_top_search"
         id=""
         aria-describedby="helpId"
         placeholder="關鍵字搜尋"
       />
-      <label class="form-check-label" for="navbar_nav_one_search">
+      <label class="form-check-label" for="navbar_nav_top_search">
         <i
           class="text-santa fa fa-search position-absolute fs-4 top-0 pt-4 mt-2 pe-2 end-0"
           aria-hidden="true"
@@ -32,7 +32,7 @@
             type="submit"
             class="form-check-input d-none"
             name=""
-            id="navbar_nav_one_search"
+            id="navbar_nav_top_search"
             value="checkedValue"
           />
         </i>
@@ -41,14 +41,14 @@
   </section>
 </header>
 
-<div class="bg-santa navbar_nav_two menu">
-  <div class="container">
+<div class="bg-santa navbar_nav_main menu ">
+  <div class="">
     <ul class="d-flex justify-content-center mb-0">
       <li class="nav_parent">
         <a class="" href="index.html"
           >關於三太<i class="fas fa-caret-down ms-2"></i
         ></a>
-        <ul class="nav_child">
+        <ul class="nav_child dropdown_animation">
           <li>
             <a class="" href="/about">公司簡介</a>
           </li>
@@ -78,7 +78,7 @@
           tabindex="0"
           >熱銷建案 <i class="fas fa-caret-down"></i>
         </a>
-        <ul class="nav_child">
+        <ul class="nav_child dropdown_animation">
           <li class="nav_parent">
             <a
               class=""
@@ -87,7 +87,7 @@
               aria-expanded="false"
               >住宅建案 <i class="fa fa-caret-right" aria-hidden="true"></i
             ></a>
-            <ul class="nav_child" style="top: -3px; left: 249px">
+            <ul class="nav_child " style="top: -3px; left: 247px;z-index: 2;">
               <li>
                 <a class="" href="index.html">台北市</a>
               </li>
@@ -119,7 +119,7 @@
           tabindex="0"
           >資產租售 <i class="fa fa-caret-down" aria-hidden="true"></i>
         </a>
-        <ul class="nav_child">
+        <ul class="nav_child dropdown_animation">
           <li>
             <a class=" " href="index.html">廠辦租賃</a>
           </li>
@@ -143,7 +143,7 @@
           tabindex="0"
           >企業社會責任 <i class="fa fa-caret-down" aria-hidden="true"></i>
         </a>
-        <ul class="nav_child">
+        <ul class="nav_child dropdown_animation">
           <li>
             <a class=" " href="index.html">投資人專區</a>
           </li>
@@ -167,7 +167,7 @@
           tabindex="0"
           >三太營造 <i class="fa fa-caret-down" aria-hidden="true"></i
         ></a>
-        <ul class="nav_child">
+        <ul class="nav_child dropdown_animation">
           <li class="" id="">
             <a class=" " href="/construction/#construction01">公司簡介</a>
           </li>
@@ -194,7 +194,7 @@
           tabindex="0"
           >客戶服務 <i class="fa fa-caret-down" aria-hidden="true"></i
         ></a>
-        <ul class="nav_child">
+        <ul class="nav_child dropdown_animation">
           <li class="   " id="">
             <a class=" " href="/fg_login/">已購客戶專區</a>
           </li>
@@ -224,7 +224,7 @@
           tabindex="0"
           >人才招募 <i class="fa fa-caret-down" aria-hidden="true"></i
         ></a>
-        <ul class="nav_child">
+        <ul class="nav_child dropdown_animation">
           <li class="   " id="">
             <a class=" " href="index.html">三太生活</a>
           </li>
