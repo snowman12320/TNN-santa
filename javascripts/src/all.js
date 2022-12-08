@@ -49,4 +49,45 @@ $(document).ready(function () {
       delay: 2000,
     },
   });
+
+  //
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 500) {
+      $("#arrow_up").fadeIn();
+    } else {
+      $("#arrow_up").fadeOut();
+    }
+  });
+
+  //
+  $(window).scroll(function () {
+    var scrollPos = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    // console.log(scrollPos, windowHeight);//捲動位置 和 視窗高度 互相都會變
+    // animated
+    $(".animated_fast").each(function () {
+      var thisPos = $(this).offset().top;
+      if (windowHeight + scrollPos >= thisPos) {
+        $(this).addClass("fadeIn");
+      }
+    });
+    $(".animated").each(function () {
+      var thisPos = $(this).offset().top;
+      if (windowHeight + scrollPos >= thisPos) {
+        $(this).addClass("fadeIn");
+      }
+    });
+    $(".animated_slow").each(function () {
+      var thisPos = $(this).offset().top;
+      if (windowHeight + scrollPos >= thisPos) {
+        $(this).addClass("fadeIn");
+      }
+    });
+  });
+
+  // bg scroll 兩種改變CSS圖的位移方法
+  //     y是指上下 ， /2是調整速度
+  // $("#profiles").css("background-position-y", -(scrollPos / 2) + "px");
+  //     transform效能較佳但較複雜
+  // $("#header-ele").css("transform", "translateY( " + scrollPos / 2 + "px )");
 });
