@@ -1,3 +1,30 @@
 .news_newsAside
     a:hover
-        color: $santa !important 
+        color: $santa !important
+
+.news_newsMain
+    border: 1px solid $gray-300
+    padding: 20px
+    margin: 20px auto
+    .item
+        display: flex
+        border-bottom: 1px solid $gray-300
+        gap: 1%
+        .img
+            width: 30%
+            padding: 20px !important
+        .txt
+            width: 69%
+            padding: 20px !important
+            h2
+                margin-top: 0 !important
+                font-size: 22px
+                font-weight: bold
+            small
+                color: $gray-600
+            p
+                display: -webkit-box
+                -webkit-box-orient: vertical
+                -webkit-line-clamp: 2  
+                overflow: hidden 
+                line-height: 1.5
