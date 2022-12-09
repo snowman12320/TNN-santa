@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>最新消息 ｜ 三太建設 SANTA</title>
+
+    <link rel="stylesheet" href="./scss/all.css" />
+    <!-- BS of JS  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- JQ  -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- Swiper JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="./javascripts/src/all.js" defer></script>
+    <!-- <script src="./javascripts/dist/bundle.js" defer></script> -->
+  </head>
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+              if (this.status == 200) {
+                elmnt.innerHTML = this.responseText;
+              }
+              if (this.status == 404) {
+                elmnt.innerHTML = "Page not found.";
+              }
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          };
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    }
+  </script>
+
+  <body class="pt-0">
+    <div w3-include-html="navbar-1.html"></div>
+    <!-- 放在include HTML後面 -->
+    <script>
+      includeHTML();
+    </script>
+    <!--  -->
+    <div class="position-relative">
+      <img
+        class="w-100 op-right of-cover"
+        height="400"
+        src="./images/客戶提供/三太-輪播圖-2.jpg"
+        alt=""
+      />
+      <h1
+        class="position-absolute p-5 text-white fw-bold"
+        style="
+          top: 30%;
+          left: 40%;
+          /* background-color: rgb(255, 255, 255, 0.3); */
+          text-shadow: 1px 3px 16px #000000;
+        "
+      >
+        建設新訊
+      </h1>
+    </div>
+    <!--  -->
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <div>
+            <h2 class="fs-5">關鍵字搜尋</h2>
+            <form class="d-flex">
+              <input
+                class="form-control rounded-0 border-1 border shadow-none"
+                type="search"
+                name="search_news"
+                id=""
+              />
+              <button type="submit" class="btn btn-santa rounded-0">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+            <div class="news_newsAside">
+              <h2 class="mb-3">最新消息</h2>
+              <a class="link-dark lh-base" href="news.html">
+                <p class="py-3 fs-5 border-bottom border-1">
+                  小宅成主流產品 政策稅改拉抬金豬年房市
+                </p>
+              </a>
+              <a class="link-dark lh-base" href="news.html">
+                <p class="py-3 fs-5 border-bottom border-1">
+                  小宅成主流產品 政策稅改拉抬金豬年房市
+                </p>
+              </a>
+              <a class="link-dark lh-base" href="news.html">
+                <p class="py-3 fs-5 border-bottom border-1">
+                  小宅成主流產品 政策稅改拉抬金豬年房市
+                </p>
+              </a>
+              <a class="link-dark lh-base" href="news.html">
+                <p class="py-3 fs-5 border-bottom border-1">
+                  小宅成主流產品 政策稅改拉抬金豬年房市
+                </p>
+              </a>
+              <a class="link-dark lh-base" href="news.html">
+                <p class="py-3 fs-5 border-bottom border-1">
+                  小宅成主流產品 政策稅改拉抬金豬年房市
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div>
+            <div>
+              <img src="./images/客戶提供/三太-輪播圖-1.jpg" alt="">
+              <h2>小宅成主流產品 政策稅改拉抬金豬年房市</h2>
+              <small>2019-05-20</small>
+              <p></p>
+              <button class="btn btn-santa"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div w3-include-html="footer-1.html"></div>
+    <!-- 放在include HTML後面 -->
+    <script>
+      includeHTML();
+    </script>
+  </body>
+</html>

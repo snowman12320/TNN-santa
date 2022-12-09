@@ -18714,7 +18714,7 @@ h3, .h3 {
   padding: 20px;
   color: #fff;
 }
-.navbar_nav_main .nav_parent:hover {
+.navbar_nav_main .nav_parent:hover, .navbar_nav_main .nav_parent:active {
   background-color: #343a40;
 }
 .navbar_nav_main .nav_parent:hover > .nav_child {
@@ -18761,6 +18761,12 @@ h3, .h3 {
   to {
     top: 63px;
   }
+}
+
+footer p:first-child:after {
+  content: "|";
+  color: white;
+  margin: 0 10px;
 }
 
 .swiper {
@@ -18866,6 +18872,10 @@ h3, .h3 {
 .index_three_smallCard strong {
   font-size: 88px;
   color: #004870;
+}
+
+.news_newsAside a:hover {
+  color: #004870 !important;
 }
 
 * {
