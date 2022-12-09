@@ -18874,6 +18874,9 @@ footer p:first-child:after {
   color: #004870;
 }
 
+.news_newsAside a p {
+  font-size: 16px !important;
+}
 .news_newsAside a:hover {
   color: #004870 !important;
 }
